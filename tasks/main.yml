@@ -1,0 +1,12 @@
+---
+- name: Install necessary apt packages
+  apt:
+    name: "{{ item }}"
+  loop: "{{ pip3_apt_pkgs | default([]) }}"
+
+- name: Update pip3 to latest
+  pip:
+    executable: pip3
+    name: pip
+    state: latest
+  when: "{{ pip3_latest }}"

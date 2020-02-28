@@ -1,0 +1,6 @@
+---
+pip3_apt_pkgs:
+- "python3-minimal"
+- "python3-pip"
+
+pip3_latest: True
