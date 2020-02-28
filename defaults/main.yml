@@ -1,5 +1,6 @@
 ---
 pip3_apt_pkgs:
+- "setuptools"
 - "python3-minimal"
 - "python3-pip"
 
