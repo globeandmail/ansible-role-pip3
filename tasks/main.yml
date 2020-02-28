@@ -4,6 +4,12 @@
     name: "{{ item }}"
   loop: "{{ pip3_apt_pkgs | default([]) }}"
 
+- name: Update /usr/bin/python symlink to python3
+  file:
+    path: /usr/bin/python
+    src: /usr/bin/python3
+    state: link
+
 - name: Update pip3 to latest
   pip:
     executable: pip3
