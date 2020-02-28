@@ -9,4 +9,4 @@
     executable: pip3
     name: pip
     state: latest
-  when: "{{ pip3_latest }}"
+  when: pip3_latest
